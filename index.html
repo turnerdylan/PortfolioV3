@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Portfolio Site</title>
+    <!-- Normalize, FontAwesome, Bootstrap, My CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar__section halftone">
+            <a class="navbar__container--name" href="#">
+                Dylan Turner
+            </a>
+            <ul class="nav__list">
+                <a href="#about" class="nav__link">
+                    <div>About</div>
+                    <div class="nav__underline"></div>
+                </a>
+                <!-- <a href="#skills" class="nav__link">
+                    <div>Skills</div>
+                    <div class="nav__underline"></div>
+                </a> -->
+                <a href="#projects" class="nav__link">
+                    <div>Projects</div>
+                    <div class="nav__underline"></div>
+                </a>
+                <a href="#footer" class="nav__link">
+                    <div>Contact</div>
+                    <div class="nav__underline"></div>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Wrapper for each section -->
+    <div class="components-container">
+
+        <!-- Intro -->
+        <section class="intro halftone" id="home">
+            <h1 class="section__title section__title--intro">Hi I'm Dylan</h1>
+
+            <h1>
+                <div class="highlight">
+                    <div>Developer</div>
+                    <div></div>
+                </div>
+                <div>&nbsp;and&nbsp;</div>
+                <div class="highlight">
+                    <div>Designer </div>
+                    <div></div>
+                </div>
+            </h1>
+
+            <p class="section__subtitle section__subtitle--intro">I love making cool things &#127918;, learning new things
+                &#127928;, and eating tasty things &#127829;
+            </p>
+        </section>
+
+
+        <!-- About me -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">
+                <div class="highlight">
+                    <div>My story</div>
+                    <div></div>
+                </div>
+            </h2>
+            <div class="section__subtitle section__subtitle--about">
+                <strong>Designer and developer who loves learning new things</strong>
+                <p class="about-me__information">Hey there! Welcome to my portfolio! I'm Dylan, a designer and a
+                    developer who loves bringing new
+                    ideas to life!
+                    With experience in software and game development, I've worked on a number of projects,
+                    ranging from simple blogs to a phone-based computer vision arcade!
+                </p>
+                <p class="about-me__information">
+                    I'm inspired by my love of both technical and creative work. Always eager to learn new technologies
+                    and concepts,
+                    I consider myself 'Always a student', and continually strive to find fun and unique perspectives to
+                    show in my work.
+                </p>
+            </div>
+            <img src="img/selfie.jpg" alt="Photo of Dylan" class="about-me__img">
+
+
+        </section>
+
+        <!-- Projects -->
+        <section class="projects" id="projects">
+
+            <h2 class="section__title section__title--projects">
+                <div class="highlight">
+                    <div>Projects</div>
+                    <div></div>
+                </div>
+            </h2>
+
+
+            <div class="project">
+                <h2 class="project__title">The Camping Project</h2>
+                <p class="project__subtitle">Personal Project</p>
+                <div class="project__btns">
+                    <a href="#">View project</a>
+                    <a href="https://github.com/turnerdylan/Camping-Project">Github</a>
+                </div>
+                <p class="project__information">The Camping project is an online tool for uploading and reviewing
+                    campgrounds, similar to yelp or something like AllTrails.
+                    It was created throuh a mix of tools and technologies and is uploaded on the web.
+                    Go check it out and add some campgrounds!</p>
+                <img src="img/camping.png" alt="Camping image" class="project__img">
+            </div>
+
+            <div class="project">
+                <h2 class="project__title">Spooked!</h2>
+                <p class="project__subtitle">Capstone Project</p>
+                <div class="project__btns">
+                    <a href="https://z-sheikh.itch.io/spooked">View project</a>
+                    <a href="https://github.com/turnerdylan/Spooked">Github</a>
+                </div>
+                <p class="project__information">'Spooked' is a multiplayer couch co-op game focused on teamwork
+                    and emergent player experiences where you and your
+                    team of amateur ghost hunters travel to a haunted
+                    island to catch some pesky ghosts.
+                    Inspired by the spookiness and goofs of'Luigi's
+                    Mansion' and the chaotic multiplayer cooperation
+                    of 'Overcooked', players will be delighted to chase
+                    and be chased by the ghosts in Spooked!
+                </p>
+                <img src="img/spooked.png" alt="Spooked image" class="project__img">
+            </div>
+
+            <div class="project">
+                <h2 class="project__title">Tinycade</h2>
+                <p class="project__subtitle">Internship</p>
+                <div class="project__btns">
+                    <a href="https://tinycade.github.io/tinycade-homepage/">View project</a>
+                    <a href="https://github.com/Tinycade">Github</a>
+                </div>
+                <p class="project__information">Tinycade is a small arcade that enables games to be played through the use of just a cell phone and simple household items.
+                    The platform is designed to support game designers
+                    in making Alt Ctrl (alternative controller) games in which
+                    the interface can be easily fabricated by hand. Players can
+                    build the alternative controllers themselves with everyday
+                    materials, such as cardboard, toothpicks and rubber bands.
+                    Tinycade uses computer vision and simple crafting approaches
+                    to make this platform accessible to as many players and
+                    designers as possible.
+                </p>
+                <img src="img/tinycade.jpg" alt="Tinycade image" class="project__img">
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <section class="footer" id="footer">
+            <div class="footer-wrapper">
+                <div>
+                    <a href="#home" class="footer__link">Dylan Turner</a>
+                    <p class="footer__info">&copy; 2023, Built by Dylan Turner</p>
+                </div>
+                <div>
+                    <div style="color: var(--clr-light);">Links</div>
+                    <div class="links-grid">
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                </div>
+                <div>
+                    <div style="color: var(--clr-light);">Get in touch</div>
+                    <a href=https://github.com/turnerdylan">
+                        <img style="height: 2rem;" src="img/github-mark-white.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

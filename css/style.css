@@ -1,0 +1,339 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+
+:root{
+    --ff-primary: 'Crimson Text', serif;
+    --ff-secondary: 'Nunito', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: rgb(18, 30, 39);
+    --clr-accent: #ff715b;;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    height: 100%;
+}
+
+a {
+    text-decoration: none; 
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { 
+    font-size: var(--fs-h1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 { font-size: var(--fs-h2);}
+h3 { font-size: var(--fs-h3);}
+
+.section__title {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.section__subtitle--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    font-family: var(--ff-secondary);
+}
+
+div{
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p{
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.intro{
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 85vh;
+    box-sizing: border-box;
+    padding: 10vw 20vh;
+    color: rgb(255, 255, 255);
+    background: var(--clr-dark);
+    z-index: -50;
+}
+
+.components-container{
+    z-index: -100;
+    height: auto;
+    min-height: 100%;
+}
+
+.navbar__section {
+    position: relative;
+    background-color: var(--clr-dark);
+    text-align: center;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100%;
+    display: block;
+    padding: 1rem;
+}
+
+.navbar__section a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.nav__list {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav__underline {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background: var(--clr-accent);
+    z-index: 50;
+}
+
+.highlight > div:nth-child(2) {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: var(--clr-accent);
+    transition: height 0.4s ease-out;
+    transform: translateY(-2rem);
+    z-index: -1;
+}
+
+.highlight > div:nth-child(2):hover {
+    height: 50px;
+}
+
+.halftone {
+    --dotSize: 0.25rem;
+    --bgSize: 1.35rem;
+    --bgPosition: calc(var(--bgSize) / 2);
+
+    background-image: radial-gradient(
+        rgb(18, 30, 50) var(--dotSize),
+        transparent 0
+        ), radial-gradient(circle at center, rgb(18, 30, 50) var(--dotSize), transparent 0);
+    background-size: var(--bgSize) var(--bgSize);
+    background-position: 0 0, var(--bgPosition) var(--bgPosition);
+}
+
+.about-me {
+    max-width: 1000px;
+    min-width: 60%;
+    margin: auto;
+    margin-bottom: 10%;
+    z-index: -100;
+    color: var(--clr-dark);
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "img subtitle";
+    grid-template-columns: 1fr 2fr;
+}
+
+.about-me__img {
+    grid-area: img;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.section__title--about{
+    grid-area: title;
+    display: inline-block;
+}
+
+.section__subtitle--about {
+    grid-area: subtitle;
+    text-align: center;
+}
+
+.about-me__information {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    text-align:left;
+}
+
+.projects {
+    max-width: 70vw;
+    height: auto;
+    margin: 0 auto;
+    color: var(--clr-dark);
+    z-index: -50;
+}
+
+.project {
+    display: grid;
+    grid-template-areas:
+    "subtitle subtitle"
+    "title img"
+    "btn img"
+    "info img";
+    grid-template-columns: 3fr 2fr;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+    z-index: 5;
+}
+
+
+
+.section__title--projects {
+    text-align: center;
+}
+
+.project__title {
+    grid-area: title;
+    margin-bottom: 3rem;
+}
+
+.project__subtitle {
+    grid-area: subtitle;
+}
+
+.project__information {
+    grid-area: info;
+    max-width: 80%;
+}
+
+.project__btns {
+    grid-area: btn;
+    min-height: 3rem;
+    display: table-cell;
+    margin-bottom: 2rem;
+
+}
+
+.project__btns a{
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    text-decoration: none;
+    height: 5rem;
+    padding: 1rem 2rem;
+    margin: 4rem 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+.project__btns a:hover {
+    opacity: 90%;
+    transform: scale(1.1, 1.1);
+}
+
+.project__img {
+    grid-area: img;
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem clamp(1rem, 7vw, 200px);
+    z-index: 2;
+    background-color: var(--clr-dark);
+}
+
+.footer a p {
+    color: var(--clr-light);
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.footer__link {
+    color: var(--clr-light); 
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+}
+
+.footer__info {
+    font-family: var(--ff-secondary);
+    color: rgb(132, 132, 132);
+
+    font-size: 1rem;
+    font-weight: var(--fw-reg);
+}
+
+.links-grid a {
+    color: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    display: flex;
+    flex-wrap: wrap;
+}
